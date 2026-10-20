@@ -402,6 +402,15 @@ h2 {
 .demo-placeholder .btn { margin: 4px; }
 .fineprint { font-size: 12.5px; color: var(--dim); margin-top: 14px; }
 
+.status-run {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 26px;
+}
+.status-run .fineprint { margin: 0; }
+
 /* ---------- status ---------- */
 .status-grid {
   display: grid;

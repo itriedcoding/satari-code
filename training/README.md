@@ -1,3 +1,13 @@
+---
+license: apache-2.0
+language: en
+tags:
+  - training
+  - qlora
+  - colab
+  - satari-code
+---
+
 # Training
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/itriedcoding/satari-code/blob/main/training/Satari_Code_SFT.ipynb)
