@@ -39,4 +39,21 @@ $env:VERCEL_TOKEN = "vcp_..."
 ./deploy/deploy_vercel.ps1
 ```
 
-The site is a static bundle in `web/`; Vercel needs no build step.
+The site is a static bundle in `web/`; Vercel needs no build step. The project is
+`satari-code` under the `seamanodes-projects` team, and `satari-code.vercel.app`
+is the production alias.
+
+**Gotcha:** if the production alias 302s to `vercel.com/sso-api` instead of serving
+the site, the project has `ssoProtection` enabled, not the alias. Deploying will not
+fix it. Clear it via the API:
+
+```powershell
+$r = Invoke-RestMethod -Uri "https://api.vercel.com/v9/projects/satari-code?teamSlug=seamanodes-projects" `
+  -Headers @{Authorization="Bearer $env:VERCEL_TOKEN"}
+if ($r.ssoProtection) {
+  Invoke-RestMethod -Method Patch -Uri "https://api.vercel.com/v9/projects/satari-code?teamSlug=seamanodes-projects" `
+    -Headers @{Authorization="Bearer $env:VERCEL_TOKEN"} `
+    -ContentType "application/json" -Body '{"ssoProtection":null}' | Out-Null
+  Write-Host "cleared ssoProtection"
+}
+```
