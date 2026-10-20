@@ -48,8 +48,7 @@ Fine-tunes **Qwen2.5-Coder-1.5B** into **Satari Code 1.5B** on
 2. Add a Hugging Face token:
    - click the key icon in the left sidebar, add a secret named `HF_TOKEN`, or
    - just paste it when the third cell asks
-   - the token needs **write** access and your account needs **~$15 of HF credits**
-     for the model/GGUF uploads at the end
+   - the token needs **write** access (uploading a model is free on Hugging Face)
 3. **Runtime -> Run all**
 
 ### If it disconnects

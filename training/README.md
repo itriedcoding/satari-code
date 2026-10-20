@@ -29,7 +29,7 @@ Click the badge above, then:
 
 1. **Runtime → Change runtime type → T4 GPU**
 2. Add a secret named `HF_TOKEN` (key icon, left sidebar) with a **write** token.
-   Your account also needs ~$15 of HF credits for the uploads at the end.
+   Uploading a model to Hugging Face is free; no credits required.
 3. **Runtime → Run all**
 
 2 epochs / 75k rows takes roughly **5–9 hours**. Colab free sessions get cut off,
