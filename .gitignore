@@ -1,0 +1,29 @@
+# secrets and local state
+.env
+.env.*
+*.token
+tokens.txt
+outputs/
+.venv/
+venv/
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# model artefacts
+*.safetensors
+*.bin
+*.gguf
+*.pt
+*.pth
+merged/
+gguf/
+
+# os
+.DS_Store
+Thumbs.db
+.vercel/
+.ms_upload_cache
+.ms_upload_cache/
